@@ -1,6 +1,6 @@
 import React, { Children, cloneElement, Component, createRef } from "react";
 import { bool, func, node, object } from "prop-types";
-import Instascan from "instascan-umd";
+import Instascan from "instascan-umd-new";
 import nil from "../utils/nil";
 
 export default class Scanner extends Component {

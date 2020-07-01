@@ -1,12 +1,12 @@
 import React from "react";
-import Instascan from "instascan-umd";
+import Instascan from "instascan-umd-new";
 import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Scanner from "../../src/components/Scanner";
 
 jest.restoreAllMocks();
 configure({ adapter: new Adapter() });
-jest.mock("instascan");
+jest.mock("instascan-new");
 
 describe("<Scanner />", () => {
   const getInstance = (idx = 0) => Instascan.Scanner.instances[idx];

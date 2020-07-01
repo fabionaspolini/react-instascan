@@ -1,11 +1,11 @@
 import React from "react";
-import Instascan from "instascan-umd";
+import Instascan from "instascan-umd-new";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Cameras from "../../src/components/Cameras";
 
 configure({ adapter: new Adapter() });
-jest.mock("instascan");
+jest.mock("instascan-new");
 jest.restoreAllMocks();
 
 describe("<Cameras />", () => {
@@ -15,8 +15,8 @@ describe("<Cameras />", () => {
   const cameraError = new Error("Permision Denied");
 
   const mockGetCameras = ({ error }) => {
-    Instascan.Camera.getCameras = jest.fn(
-      () => (error ? Promise.reject(cameraError) : Promise.resolve(fakeCameraSetup))
+    Instascan.Camera.getCameras = jest.fn(() =>
+      error ? Promise.reject(cameraError) : Promise.resolve(fakeCameraSetup)
     );
   };
 

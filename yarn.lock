@@ -1614,6 +1614,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
 babel-polyfill@^6.9.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+  integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
   dependencies:
     babel-runtime "^6.26.0"
     core-js "^2.5.0"
@@ -2862,6 +2863,11 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -3048,8 +3054,9 @@ es6-iterator@~2.0.3:
     es6-symbol "^3.1.1"
 
 es6-promise@^4.0.2:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
 
 es6-symbol@^3.1.1, es6-symbol@~3.1.1:
   version "3.1.1"
@@ -3624,6 +3631,7 @@ fsevents@^1.1.2, fsevents@^1.2.3:
 fsm-as-promised@^0.13.0:
   version "0.13.2"
   resolved "https://registry.yarnpkg.com/fsm-as-promised/-/fsm-as-promised-0.13.2.tgz#5f4e11086828b70a1922dc7b4f81c0817d6e8238"
+  integrity sha1-X04RCGgotwoZItx7T4HAgX1ugjg=
   dependencies:
     es6-promise "^4.0.2"
     lodash "^4.16.2"
@@ -4259,20 +4267,22 @@ inquirer@^5.2.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-instascan-umd@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/instascan-umd/-/instascan-umd-1.0.1.tgz#c80384745a73ddc46decd6e1da2ff865fd92318e"
-  dependencies:
-    instascan "1.0.0"
-
-instascan@1.0.0:
+instascan-new@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/instascan/-/instascan-1.0.0.tgz#de5949f73f698f8dff68df0a7bcf6942a799ee44"
+  resolved "https://registry.yarnpkg.com/instascan-new/-/instascan-new-1.0.0.tgz#6067c025eb3ad5075524fd79365f078de9f4835e"
+  integrity sha512-CsmrmNntmd0H0xG/CxvKQdn49MBGGzqPELtBmVRNqLtUb8CzXwjc596jXNhfVW39k25bUp82cwCHh2l/NsDH6w==
   dependencies:
     babel-polyfill "^6.9.1"
     fsm-as-promised "^0.13.0"
     visibilityjs "^1.2.3"
     webrtc-adapter "^1.4.0"
+
+instascan-umd-new@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/instascan-umd-new/-/instascan-umd-new-1.0.1.tgz#f34415d75870bdebb41f77f5f2980d21b94c1021"
+  integrity sha512-Q0wWX8T+xTHZhkhHJfnh8+lMO5HniHsHGqrFTCjEhkmxUuIU32Jf0mdsC+y2nfXb/uuPW2AfpeamWuQM82VFVw==
+  dependencies:
+    instascan-new "^1.0.0"
 
 internal-ip@1.2.0:
   version "1.2.0"
@@ -5327,9 +5337,14 @@ lodash.unescape@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
 
-lodash@^4.13.1, lodash@^4.15.0, lodash@^4.16.2, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+
+lodash@^4.16.2:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log-driver@^1.x:
   version "1.2.7"
@@ -6823,6 +6838,7 @@ regenerate@^1.2.1, regenerate@^1.3.3, regenerate@^1.4.0:
 regenerator-runtime@^0.10.5:
   version "0.10.5"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
+  integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
 
 regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
   version "0.11.1"
@@ -7191,6 +7207,7 @@ scoped-regex@^1.0.0:
 sdp@^1.0.0:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/sdp/-/sdp-1.5.4.tgz#8e038f6ddb14bd765ae1f4b5216e12094511e0d0"
+  integrity sha1-jgOPbdsUvXZa4fS1IW4SCUUR4NA=
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -7520,6 +7537,7 @@ stack-utils@^1.0.1:
 stampit@^3.0.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/stampit/-/stampit-3.2.1.tgz#953a41a49458a0b286ffb1e3c9d6ce7036e589db"
+  integrity sha1-lTpBpJRYoLKG/7HjydbOcDblids=
 
 static-extend@^0.1.1:
   version "0.1.2"
@@ -8152,6 +8170,7 @@ vinyl@^2.0.1:
 visibilityjs@^1.2.3:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/visibilityjs/-/visibilityjs-1.2.8.tgz#4ccdcebdaef0b34fb89219ab8e10e39c3a7cbfd8"
+  integrity sha512-Y+aL3OUX88b+/VSmkmC2ApuLbf0grzbNLpCfIDSw3BzTU6PqcPsdgIOaw8b+eZoy+DdQqnVN3y/Evow9vQq9Ig==
 
 vm-browserify@0.0.4:
   version "0.0.4"
@@ -8343,6 +8362,7 @@ webpack@^4.10.2:
 webrtc-adapter@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-1.4.0.tgz#58289a63d054c65b36fb0ef389ea2f6d0c7f5d98"
+  integrity sha1-WCiaY9BUxls2+w7zieovbQx/XZg=
   dependencies:
     sdp "^1.0.0"
 
