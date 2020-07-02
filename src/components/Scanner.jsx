@@ -19,7 +19,7 @@ export default class Scanner extends Component {
   };
 
   _scanner = null;
-  
+
   constructor(props) {
     super(props);
     this.videoRef = React.createRef();
@@ -71,7 +71,7 @@ export default class Scanner extends Component {
     if (video.type === "video") {
       return cloneElement(video, { ref: this.videoRef });
     } else {
-      return (<p>No Video element child at Scanner</p>)
+      return <p>No Video element child at Scanner</p>;
     }
   }
 }
