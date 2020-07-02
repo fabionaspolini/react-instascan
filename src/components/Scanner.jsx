@@ -19,7 +19,11 @@ export default class Scanner extends Component {
   };
 
   _scanner = null;
-  _ref = null;
+  
+  constructor(props) {
+    super(props);
+    this.videoRef = React.createRef();
+  }
 
   shouldComponentUpdate({ stop, onStart = nil, onStop = nil, camera }) {
     if (this._scanner) {
@@ -47,7 +51,7 @@ export default class Scanner extends Component {
       onInactive = nil
     } = this.props;
 
-    this._scanner = new Instascan.Scanner({ ...options, video: this._ref.current });
+    this._scanner = new Instascan.Scanner({ ...options, video: this.videoRef.current });
     if (!stop) {
       this._scanner.addListener("scan", onScan);
     }
@@ -63,9 +67,11 @@ export default class Scanner extends Component {
   }
 
   render() {
-    const child = Children.only(this.props.children);
-    this._ref = createRef();
-
-    return cloneElement(child, { ref: this._ref });
+    const video = Children.only(this.props.children);
+    if (video.type === "video") {
+      return cloneElement(video, { ref: this.videoRef });
+    } else {
+      return (<p>No Video element child at Scanner</p>)
+    }
   }
 }
