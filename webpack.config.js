@@ -3,6 +3,7 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const mode = process.env.NODE_ENV;
 const isProd = mode === "production";
+console.log(`>>>>>>>>>> webpack build Environment mode: ${mode} - isProd: ${isProd}`);
 
 module.exports = env => ({
   mode,

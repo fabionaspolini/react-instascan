@@ -1,6 +1,6 @@
 {
   "name": "react-instascan-new",
-  "version": "1.2.1",
+  "version": "1.2.6",
   "description": "A React port of the Instascan lib - Forked from react-instascan",
   "main": "dist/main.js",
   "repository": "https://github.com/fabionaspolini/react-instascan",
@@ -31,11 +31,11 @@
     "test": "jest --coverage",
     "test:watch": "npm test --watch",
     "test:watch:debug": "node --inspect-brk node_modules/.bin/jest --watch",
-    "build": "webpack --mode production",
+    "build": "set NODE_ENV=production&&webpack --mode production",
     "start": "webpack-dev-server --mode development --open ",
     "eslint": "eslint \"{webpack.config.js,{sample,src,tests}/**/*.{js,jsx}}\"",
     "format": "prettier-eslint --write \"{webpack.config.js,{sample,src,tests}/**/*.{js,jsx}}\"",
-    "analyze": "webpack -mode production --env=analyze",
+    "analyze": "set NODE_ENV=production&&webpack -mode production --env=analyze",
     "codacy-coverage": "cat coverage/lcov.info | codacy-coverage"
   },
   "devDependencies": {
